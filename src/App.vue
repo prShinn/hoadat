@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 const arrImg = ref(["/hoadat/src/assets/3.JPG", "/hoadat/src/assets/2.JPG"]);
 const flowerId = ref(0);
-const flowers = ref<[{ id?: number; x?: number; duration?: number }]>();
+const flowers = ref<any[]>([]);
 const day_names = ref(["T2", "T3", "T4", "T5", "T6", "T7", "CN"]);
 const month_names = ref([
   "Tháng 1",
@@ -19,7 +19,6 @@ const month_names = ref([
   "Tháng 12",
 ]);
 const showIndex = ref(0);
-const flower = ref<{ id: number; x: number; duration: number }>();
 function startFlowerFall() {
   setInterval(() => {
     if (!flowers.value) {
@@ -155,7 +154,7 @@ onMounted(() => {
     </div>
     <div class="w-full md:flex md:justify-center">
       <div class="w-full md:w-4/5" v-for="(img, index) in arrImg" :key="index">
-        <img :src="img" alt="" v-if="showIndex == index" />
+        <img :src="img" alt="" v-show="showIndex == index" />
       </div>
     </div>
     <div class="flex flex-col md:flex-row md:px-4">
