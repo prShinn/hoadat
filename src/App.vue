@@ -1,6 +1,9 @@
 <script setup lang="ts" >
 import { ref, onMounted } from "vue";
-const arrImg = ref(["../hoadat/src/assets/3.JPG", "../hoadat/src/assets/2.JPG"]);
+const arrImg = ref([
+  "/hoadat/src/assets/6b63aa212102815cd813.jpg",
+  "/hoadat/src/assets/b01eb2433960993ec071.jpg",
+]);
 const flowerId = ref(0);
 const flowers = ref<any[]>([]);
 const day_names = ref(["T2", "T3", "T4", "T5", "T6", "T7", "CN"]);
@@ -152,26 +155,30 @@ onMounted(() => {
     <div class="w-full flex justify-center">
       <img src="./assets/title.png" alt="" />
     </div>
-    <div class="w-full md:flex md:justify-center">
-      <div class="w-full md:w-4/5" v-for="(img, index) in arrImg" :key="index">
-        <img :src="img" alt="" v-show="showIndex == index" />
-      </div>
+    <div
+      class="flex justify-center"
+      v-for="(img, index) in arrImg"
+      :key="index"
+    >
+      <img class="w-full" :src="img" alt="" v-show="showIndex == index" />
     </div>
-    <div class="flex flex-col md:flex-row md:px-4">
+    <div class="flex flex-col md:flex-row md:gap-8 p-4">
       <div class="flex justify-center md:justify-end">
-        <div class="text-center">
-          <p class="text-3xl md:text-7xl">Save the Date</p>
+        <div class="text-center border-4 p-4 md:w-3/4">
+          <p class="text-3xl md:text-7xl font-black">Save the Date</p>
           <p class="text-xl md:text-lg">For the weddiing of</p>
-          <p class="text-2xl md:text-4xl">Công Đạt & Thanh Hoa</p>
-          <p>
+          <p class="text-2xl md:text-4xl">Công Đạt ♥ Thanh Hoa</p>
+          <p class="mt-2">
             Thật vui vì được gặp và đón tiếp mọi trong một dịp đặc biệt như này.
             Cảm ơn các mọi người rất nhiều vì sự hiện diện cùng những lời chúc
             tốt đẹp mà mọi người đã dành cho gia đình và chúng em/anh/chị/cháu!
           </p>
         </div>
       </div>
-      <div class="flex justify-center md:justify-start mt-4">
-        <div class="w-full">
+      <div
+        class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
+      >
+        <div class="w-full md:w-3/4">
           <div
             class="text-center w-full"
             v-for="(month, index) of month_names"
@@ -186,7 +193,7 @@ onMounted(() => {
               </p>
               <div class="p-1 m-1">
                 <div
-                  class="grid grid-cols-7 font-semibold text-green-800 border-b-2"
+                  class="grid grid-cols-7 font-semibold text-green-800 border-b-2 mb-2"
                 >
                   <div v-for="days in day_names" :key="days">
                     <div
@@ -206,7 +213,7 @@ onMounted(() => {
                   <div v-for="kun of daysgenerater()[index]" :key="kun">
                     <div
                       :class="{
-                        ' bg-pink-200 ring-4 rounded-full':
+                        ' bg-pink-200 rounded-full p-2':
                           isToDay(kun, index) == true,
                       }"
                     >
@@ -216,6 +223,38 @@ onMounted(() => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:gap-4 px-4 mt-4">
+      <div class="flex justify-center md:justify-end">
+        <div class="w-full md:w-3/4 flex items-center">
+          <div class="w-full border-r-4 rounded-full">
+            <img class="rounded-full" src="./assets/DSC03105.jpg" alt="" />
+          </div>
+          <div>
+            <p class="text-center text-2xl">Chú rể</p>
+            <p>
+              Anh là chàng trai mang hài xanh, dành hết thanh xuân để yêu em !!!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
+      >
+        <div class="w-full md:w-3/4 flex items-center">
+          <div>
+            <p class="text-center text-2xl">Cô dâu</p>
+            <p>Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!</p>
+          </div>
+          <div class="w-full border-r-4 rounded-full">
+            <img
+              class="rounded-full"
+              src="./assets/8d571bfddfde7f8026cf.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>
