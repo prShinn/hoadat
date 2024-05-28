@@ -140,7 +140,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="h-screen overflow-y-scroll">
+  <div class="h-screen overflow-y-scroll bg-img">
     <div
       v-for="flower in flowers"
       :key="flower.id"
@@ -155,12 +155,19 @@ onMounted(() => {
     <div class="w-full flex justify-center">
       <img src="./assets/title.png" alt="" />
     </div>
-    <div
-      class="flex justify-center"
-      v-for="(img, index) in arrImg"
-      :key="index"
-    >
-      <img class="w-full" :src="img" alt="" v-show="showIndex == index" />
+    <div class="flex justify-center">
+      <img
+        class="w-full"
+        src="./assets/b01eb2433960993ec071.jpg"
+        alt=""
+        v-show="showIndex == 0"
+      />
+      <img
+        class="w-full"
+        src="./assets/6b63aa212102815cd813.jpg"
+        alt=""
+        v-show="showIndex == 1"
+      />
     </div>
     <div class="flex flex-col md:flex-row md:gap-8 p-4">
       <div class="flex justify-center md:justify-end">
@@ -229,7 +236,7 @@ onMounted(() => {
     </div>
     <div class="flex flex-col md:flex-row md:gap-4 px-4 mt-4">
       <div class="flex justify-center md:justify-end">
-        <div class="w-full md:w-3/4 flex items-center">
+        <div class="w-full md:w-3/4 flex items-center gap-4">
           <div class="w-full border-r-4 rounded-full">
             <img class="rounded-full" src="./assets/DSC03105.jpg" alt="" />
           </div>
@@ -244,7 +251,7 @@ onMounted(() => {
       <div
         class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
       >
-        <div class="w-full md:w-3/4 flex items-center">
+        <div class="w-full md:w-3/4 flex items-center gap-4">
           <div>
             <p class="text-center text-2xl">Cô dâu</p>
             <p>Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!</p>
@@ -259,17 +266,20 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row md:px-4 mt-4">
-      <div class="flex justify-center md:justify-end">
-        <div class="w-full text-center">
-          <div class="font-bold text-2xl">Tiệc nhà Trai</div>
-          <img src="./assets/trai.jpg" alt="" />
+    <div class="w-full mt-4">
+      <div class="text-center text-3xl font-extrabold">Sự Kiện Cưới</div>
+      <div class="flex flex-col md:flex-row md:px-4 mt-4">
+        <div class="flex justify-center md:justify-end">
+          <div class="w-full text-center">
+            <div class="font-bold text-2xl">Tiệc nhà Trai</div>
+            <img src="./assets/trai.jpg" alt="" />
+          </div>
         </div>
-      </div>
-      <div class="flex justify-center md:justify-start mt-4">
-        <div class="w-full text-center">
-          <div class="font-bold text-2xl">Tiệc nhà Gái</div>
-          <img src="./assets/gai.jpg" alt="" />
+        <div class="flex justify-center md:justify-start mt-4">
+          <div class="w-full text-center">
+            <div class="font-bold text-2xl">Tiệc nhà Gái</div>
+            <img src="./assets/gai.jpg" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -277,6 +287,9 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.bg-img {
+  background-image: "./assets/footer-shape.png";
+}
 .flower {
   position: absolute;
   top: -50px; /* Bắt đầu từ trên màn hình */
