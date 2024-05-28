@@ -29,7 +29,6 @@ function startFlowerFall() {
     }
   }, 1000); // Tạo hoa mới mỗi 500ms
   setInterval(() => {
-    console.log("showIndex: ", showIndex.value);
     showIndex.value++;
 
     if (showIndex.value >= arrImg.value.length) {
@@ -46,7 +45,7 @@ function createFlower() {
   return flower.value;
 }
 function createFlowers() {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 50; i++) {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
   }
@@ -175,7 +174,7 @@ onMounted(() => {
             :key="index"
           >
             <div
-              v-if="index == 5"
+              v-show="index == 5"
               class="p-1 m-1 font-sans bg-white w-full min-h-56 rounded shadow-md bg-blend-luminosity bg-gradient-to-b from-green-50 via-white to-green-50"
             >
               <p class="p-1 text-xl font-semibold text-center text-indigo-800">
