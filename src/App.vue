@@ -19,7 +19,7 @@ const month_names = ref([
   "Tháng 12",
 ]);
 const showIndex = ref(0);
-const flower = ref({});
+const flower = ref({}) as any;
 function startFlowerFall() {
   setInterval(() => {
     flowers.value.push(createFlower());
