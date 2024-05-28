@@ -37,11 +37,12 @@ function startFlowerFall() {
   }, 2000); // chuyển slide mỗi 1s
 }
 function createFlower() {
-  return {
+  let _obj: { id: number; x: number; duration: number } = {
     id: flowerId.value++,
     x: Math.random() * window.innerWidth,
     duration: Math.random() * 5 + 10, // Thời gian rơi từ 5 đến 10 giây
   };
+  return _obj;
 }
 function createFlowers() {
   for (let i = 0; i < 3; i++) {
