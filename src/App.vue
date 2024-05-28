@@ -37,12 +37,20 @@ function startFlowerFall() {
   }, 2000); // chuyển slide mỗi 1s
 }
 function createFlower() {
-  flower.value = {
-    id: flowerId.value++,
-    x: Math.random() * window.innerWidth,
-    duration: Math.random() * 5 + 10, // Thời gian rơi từ 5 đến 10 giây
-  };
-  return flower.value;
+  if (!flowers.value) {
+    flower.value = {
+      id: flowerId.value++,
+      x: Math.random() * window.innerWidth,
+      duration: Math.random() * 5 + 10, // Thời gian rơi từ 5 đến 10 giây
+    };
+    return flower.value;
+  } else {
+    return {
+      id: flowerId.value++,
+      x: Math.random() * window.innerWidth,
+      duration: Math.random() * 5 + 10, // Thời gian rơi từ 5 đến 10 giây
+    };
+  }
 }
 function createFlowers() {
   for (let i = 0; i < 50; i++) {
