@@ -224,13 +224,13 @@ onMounted(() => {
       <div class="flex justify-center md:justify-end">
         <div class="w-full text-center">
           <div class="font-bold text-2xl">Tiệc nhà Trai</div>
-          <img src="/hoadat/src/assets/trai.jpg" alt="" />
+          <img src="./assets/trai.jpg" alt="" />
         </div>
       </div>
       <div class="flex justify-center md:justify-start mt-4">
         <div class="w-full text-center">
           <div class="font-bold text-2xl">Tiệc nhà Gái</div>
-          <img src="/hoadat/src/assets/gai.jpg" alt="" />
+          <img src="./assets/gai.jpg" alt="" />
         </div>
       </div>
     </div>
