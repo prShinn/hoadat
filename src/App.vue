@@ -175,10 +175,12 @@ onMounted(() => {
     <div class="flex flex-col md:flex-row md:gap-8 p-4">
       <div class="flex justify-center md:justify-end">
         <div class="text-center border-4 rounded-xl p-4 md:w-3/4">
-          <p class="text-3xl md:text-7xl font-black">Save the Date</p>
-          <p class="text-xl md:text-lg">For the weddiing of</p>
-          <p class="text-2xl md:text-4xl">Công Đạt ♥ Thanh Hoa</p>
-          <p class="mt-2">
+          <p class="text-3xl md:text-7xl font-black font-brush">
+            Save the Date
+          </p>
+          <p class="text-xl md:text-lg font-brush">For the weddiing of</p>
+          <p class="text-2xl md:text-4xl font-comic">Công Đạt ♥ Thanh Hoa</p>
+          <p class="mt-2 font-comic">
             Thật vui vì được gặp và đón tiếp mọi trong một dịp đặc biệt như này.
             Cảm ơn các mọi người rất nhiều vì sự hiện diện cùng những lời chúc
             tốt đẹp mà mọi người đã dành cho gia đình và chúng em/anh/chị/cháu!
@@ -189,7 +191,9 @@ onMounted(() => {
         class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
       >
         <div class="w-full md:w-3/4 border-2 rounded-lg p-4">
-          <p class="text-center text-3xl font-extrabold">Ngày tổ chức</p>
+          <p class="text-center text-3xl font-extrabold font-comic">
+            Ngày tổ chức
+          </p>
           <div
             class="text-center w-full"
             v-for="(month, index) of month_names"
@@ -199,7 +203,9 @@ onMounted(() => {
               v-show="index == 5"
               class="p-1 m-1 font-sans w-full min-h-56 rounded"
             >
-              <p class="p-1 text-xl font-semibold text-center text-indigo-800">
+              <p
+                class="p-1 text-xl font-semibold text-center text-indigo-800 font-brush"
+              >
                 {{ month }}-2024
               </p>
               <div class="p-1 m-1">
@@ -208,7 +214,7 @@ onMounted(() => {
                 >
                   <div v-for="days in day_names" :key="days">
                     <div
-                      class="grid place-items-center"
+                      class="grid place-items-center font-brush"
                       :class="{
                         'text-red-600': days == 'CN',
                       }"
@@ -228,7 +234,7 @@ onMounted(() => {
                           isToDay(kun, index) == true,
                       }"
                     >
-                      <p class="text-2xl">{{ kun }}</p>
+                      <p class="text-2xl font-brush">{{ kun }}</p>
                     </div>
                   </div>
                 </div>
@@ -249,8 +255,8 @@ onMounted(() => {
           <img class="rounded-full" src="./assets/DSC03105.jpg" alt="" />
         </div>
         <div>
-          <p class="text-center text-2xl">Chú rể</p>
-          <p>
+          <p class="text-center text-2xl font-comic">Chú rể</p>
+          <p class="font-comic">
             Anh là chàng trai mang hài xanh, dành hết thanh xuân để yêu em !!!
           </p>
         </div>
@@ -260,8 +266,10 @@ onMounted(() => {
       >
         <div class="w-full flex items-center gap-4">
           <div>
-            <p class="text-center text-2xl">Cô dâu</p>
-            <p>Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!</p>
+            <p class="text-center text-2xl font-comic">Cô dâu</p>
+            <p class="font-comic">
+              Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!
+            </p>
           </div>
           <div class="w-full border-r-4 rounded-full">
             <img
@@ -275,17 +283,19 @@ onMounted(() => {
     </div>
     <!-- Sự kiện cưới -->
     <div class="w-full mt-4">
-      <div class="text-center text-3xl font-extrabold">Sự Kiện Cưới</div>
+      <div class="text-center text-3xl font-extrabold font-comic">
+        Sự Kiện Cưới
+      </div>
       <div class="flex flex-col md:flex-row md:px-4 mt-4">
         <div class="flex justify-center md:justify-end">
           <div class="w-full text-center">
-            <div class="font-bold text-2xl">Tiệc nhà Trai</div>
+            <div class="font-bold text-2xl font-comic">Tiệc nhà Trai</div>
             <img src="./assets/trai.jpg" alt="" />
           </div>
         </div>
         <div class="flex justify-center md:justify-start mt-4">
           <div class="w-full text-center">
-            <div class="font-bold text-2xl">Tiệc nhà Gái</div>
+            <div class="font-bold text-2xl font-comic">Tiệc nhà Gái</div>
             <img src="./assets/gai.jpg" alt="" />
           </div>
         </div>
@@ -293,7 +303,9 @@ onMounted(() => {
     </div>
     <!-- Album ảnh -->
     <div class="w-full border-t-4 pt-6 mt-4">
-      <p class="text-center font-extrabold my-2 text-4xl">Album ảnh cưới</p>
+      <p class="text-center font-extrabold my-2 text-4xl font-comic">
+        Album ảnh cưới
+      </p>
       <div class="grid grid-cols-2">
         <div class="col-span-1">
           <div class="p-2">
@@ -371,8 +383,8 @@ onMounted(() => {
       </div>
     </div>
     <!-- Cảm ơn -->
-    <div class="w-full">
-      <p class="text-center my-6 font-extrabold text-3xl">
+    <div class="w-full my-6">
+      <p class="text-center my-6 font-extrabold text-3xl font-brush">
         Xin chân thành cảm ơn !
       </p>
     </div>
@@ -380,8 +392,11 @@ onMounted(() => {
 </template>
 
 <style scoped>
-* {
+.font-brush {
   font-family: "Brush Script MT", cursive;
+}
+.font-comic {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 .bg-img {
   background-image: "./assets/footer-shape.png";
