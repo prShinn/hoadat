@@ -282,21 +282,86 @@ onMounted(() => {
       </div>
     </div>
     <!-- Sự kiện cưới -->
-    <div class="w-full mt-4">
+    <div class="w-full border-t-4 pt-6 mt-4">
       <div class="text-center text-3xl font-extrabold font-comic">
         Sự Kiện Cưới
       </div>
       <div class="flex flex-col md:flex-row md:px-4 mt-4">
-        <div class="flex justify-center md:justify-end">
+        <div class="flex justify-center md:justify-start mt-4 p-4 border">
           <div class="w-full text-center">
-            <div class="font-bold text-2xl font-comic">Tiệc nhà Trai</div>
-            <img src="./assets/trai.jpg" alt="" />
+            <div class="font-bold text-2xl font-comic">Lễ cưới nhà Gái</div>
+            <div class="flex justify-center my-1">
+              <img class="rounded-full w-1/3" src="./assets/gai.jpg" alt="" />
+            </div>
+            <div class="font-comic text-xl my-1 px-4">
+              số 3 ngách 87/43/10 yên xá tân triều hà nội
+            </div>
+            <div class="flex justify-center">
+              <a
+                class="border-2 w-3/4 p-2 my-1 rounded-full text-blue-500 font-bold"
+                href="https://maps.app.goo.gl/YBpMKKNBBY5mAZocA"
+              >
+                Xem bản đồ</a
+              >
+            </div>
           </div>
         </div>
         <div class="flex justify-center md:justify-start mt-4">
-          <div class="w-full text-center">
-            <div class="font-bold text-2xl font-comic">Tiệc nhà Gái</div>
-            <img src="./assets/gai.jpg" alt="" />
+          <div class="w-full text-center p-4 border">
+            <div class="font-bold text-2xl font-comic">Tiệc cưới nhà Gái</div>
+            <div class="flex justify-center my-1">
+              <img class="rounded-full w-1/3" src="./assets/gai.jpg" alt="" />
+            </div>
+            <div class="font-comic text-xl my-1 px-4">
+              Sân chơi cộng đồng yên xá
+            </div>
+            <div class="flex justify-center">
+              <a
+                class="border-2 w-3/4 p-2 my-1 rounded-full text-blue-500 font-bold"
+                href="https://maps.app.goo.gl/EohrdVRQ5mG8enZu6"
+              >
+                Xem bản đồ</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <div class="w-full text-center p-4 border">
+            <div class="font-bold text-2xl font-comic">Lễ cưới nhà Trai</div>
+            <div class="flex justify-center my-1">
+              <img class="rounded-full w-1/3" src="./assets/trai.jpg" alt="" />
+            </div>
+            <div class="font-comic text-xl my-1 px-4">
+              Sn 36 Ngõ 65 Tổ 11 Mậu Lương Kiến Hưng, Hà Đông - Hà Nội
+            </div>
+            <div class="flex justify-center">
+              <a
+                class="border-2 w-3/4 p-2 my-1 rounded-full text-blue-500 font-bold"
+                href="https://maps.app.goo.gl/HAsLijP3YgfXXnww7"
+              >
+                Xem bản đồ</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <div class="w-full text-center p-4 border">
+            <div class="font-bold text-2xl font-comic">Tiệc cưới nhà Trai</div>
+            <div class="flex justify-center my-1">
+              <img class="rounded-full w-1/3" src="./assets/trai.jpg" alt="" />
+            </div>
+            <div class="font-comic text-xl my-1 px-4">
+              Nhà Văn Hóa Mậu Lương, 78 P. Mậu Lương, Kiến Hưng, Hà Đông, Hà
+              Nội, Việt Nam
+            </div>
+            <div class="flex justify-center">
+              <a
+                class="border-2 w-3/4 p-2 my-1 rounded-full text-blue-500 font-bold"
+                href="https://maps.app.goo.gl/SXJZ4idZxgzYAa766"
+              >
+                Xem bản đồ</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -306,6 +371,16 @@ onMounted(() => {
       <p class="text-center font-extrabold my-2 text-4xl font-comic">
         Album ảnh cưới
       </p>
+      <div class="w-full text-center relative">
+        <a href="https://youtu.be/RUHelM6Qmvo?si=8oMTx7fpzm6c3x-w">
+          <img class="h-1/2" src="./assets/2.JPG" alt="" />
+          <p
+            class="text-3xl absolute top-[50%] left-[15%] md:left-[35%] md:text-6xl text-pink-500 font-black font-comic"
+          >
+            Xem video cưới ở đây nha
+          </p></a
+        >
+      </div>
       <div class="grid grid-cols-2">
         <div class="col-span-1">
           <div class="p-2">
@@ -383,7 +458,7 @@ onMounted(() => {
       </div>
     </div>
     <!-- Cảm ơn -->
-    <div class="w-full my-6">
+    <div class="w-full border-t-4 pt-6 mt-4">
       <p class="text-center my-6 font-extrabold text-3xl font-brush">
         Xin chân thành cảm ơn !
       </p>
