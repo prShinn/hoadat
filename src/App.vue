@@ -19,6 +19,7 @@ const month_names = ref([
   "Tháng 12",
 ]);
 const showIndex = ref(0);
+const flower = ref({});
 function startFlowerFall() {
   setInterval(() => {
     flowers.value.push(createFlower());
@@ -37,12 +38,12 @@ function startFlowerFall() {
   }, 2000); // chuyển slide mỗi 1s
 }
 function createFlower() {
-  let _obj: { id: number; x: number; duration: number } = {
+  flower.value = {
     id: flowerId.value++,
     x: Math.random() * window.innerWidth,
     duration: Math.random() * 5 + 10, // Thời gian rơi từ 5 đến 10 giây
   };
-  return _obj;
+  return flowers.value;
 }
 function createFlowers() {
   for (let i = 0; i < 3; i++) {
@@ -128,6 +129,7 @@ function hafta(sol: any, ma: any) {
   return haftakuni;
 }
 onMounted(() => {
+  createFlowers();
   startFlowerFall();
 });
 </script>
