@@ -373,13 +373,31 @@ onMounted(() => {
       </p>
       <div class="w-full text-center relative">
         <a href="https://youtu.be/RUHelM6Qmvo?si=8oMTx7fpzm6c3x-w">
-          <img class="h-1/2" src="./assets/2.JPG" alt="" />
+          <img class="h-1/2" src="./assets/64b5ecb0289388cdd182.jpg" alt="" />
           <p
-            class="text-3xl absolute top-[50%] left-[15%] md:left-[35%] md:text-6xl text-pink-500 font-black font-comic"
+            class="text-2xl absolute top-[25%] left-[15%] md:left-[35%] md:text-6xl text-pink-500 font-black font-comic"
           >
             Xem video cưới ở đây nha
-          </p></a
-        >
+          </p>
+          <p
+            class="ring-4 text-pink-500 flex justify-center absolute top-[40%] left-[45%] md:left-[50%] md:text-6xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="72"
+              height="72"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-play"
+            >
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </p>
+        </a>
       </div>
       <div class="grid grid-cols-2">
         <div class="col-span-1">
