@@ -292,7 +292,8 @@ onMounted(() => {
       </div>
     </div>
     <!-- Album ảnh -->
-    <div class="w-full">
+    <div class="w-full border-t-4 pt-6 mt-4">
+      <p class="text-center font-extrabold my-2 text-4xl">Album ảnh cưới</p>
       <div class="grid grid-cols-2">
         <div class="col-span-1">
           <div class="p-2">
@@ -348,6 +349,13 @@ onMounted(() => {
           <div class="p-2">
             <img
               class="rounded-lg"
+              src="./assets/b01eb2433960993ec071.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
               src="./assets/ebe3e28569a6c9f890b7.jpg"
               alt=""
             />
@@ -359,15 +367,14 @@ onMounted(() => {
               alt=""
             />
           </div>
-          <div class="p-2">
-            <img
-              class="rounded-lg"
-              src="./assets/b01eb2433960993ec071.jpg"
-              alt=""
-            />
-          </div>
         </div>
       </div>
+    </div>
+    <!-- Cảm ơn -->
+    <div class="w-full">
+      <p class="text-center my-6 font-extrabold text-3xl">
+        Xin chân thành cảm ơn !
+      </p>
     </div>
   </div>
 </template>
