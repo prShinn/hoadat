@@ -43,7 +43,7 @@ function createFlower() {
     x: Math.random() * window.innerWidth,
     duration: Math.random() * 5 + 10, // Thời gian rơi từ 5 đến 10 giây
   };
-  return flowers.value;
+  return flower.value;
 }
 function createFlowers() {
   for (let i = 0; i < 3; i++) {
