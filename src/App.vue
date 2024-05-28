@@ -2,7 +2,7 @@
 import { ref, onMounted } from "vue";
 const arrImg = ref(["/hoadat/src/assets/3.JPG", "/hoadat/src/assets/2.JPG"]);
 const flowerId = ref(0);
-const flowers = ref<[{ id: number; x: number; duration: number }]>();
+const flowers = ref<[{ id?: number; x?: number; duration?: number }]>();
 const day_names = ref(["T2", "T3", "T4", "T5", "T6", "T7", "CN"]);
 const month_names = ref([
   "Tháng 1",
@@ -22,6 +22,9 @@ const showIndex = ref(0);
 const flower = ref<{ id: number; x: number; duration: number }>();
 function startFlowerFall() {
   setInterval(() => {
+    if (!flowers.value) {
+      flowers.value = [];
+    }
     flowers.value.push(createFlower());
     // Giới hạn số lượng hoa để không làm chậm trang
     if (flowers.value.length > 100) {
@@ -44,6 +47,9 @@ function createFlower() {
   };
 }
 function createFlowers() {
+  if (!flowers.value) {
+    flowers.value = [];
+  }
   for (let i = 0; i < 50; i++) {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
