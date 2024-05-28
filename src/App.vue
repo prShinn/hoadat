@@ -152,9 +152,11 @@ onMounted(() => {
     >
       🌸
     </div>
+    <!-- Title -->
     <div class="w-full flex justify-center">
       <img src="./assets/title.png" alt="" />
     </div>
+    <!-- Ảnh cưới -->
     <div class="flex justify-center">
       <img
         class="w-full"
@@ -169,9 +171,10 @@ onMounted(() => {
         v-show="showIndex == 1"
       />
     </div>
+    <!-- Lời mời + ngày cưới -->
     <div class="flex flex-col md:flex-row md:gap-8 p-4">
       <div class="flex justify-center md:justify-end">
-        <div class="text-center border-4 p-4 md:w-3/4">
+        <div class="text-center border-4 rounded-xl p-4 md:w-3/4">
           <p class="text-3xl md:text-7xl font-black">Save the Date</p>
           <p class="text-xl md:text-lg">For the weddiing of</p>
           <p class="text-2xl md:text-4xl">Công Đạt ♥ Thanh Hoa</p>
@@ -185,7 +188,8 @@ onMounted(() => {
       <div
         class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
       >
-        <div class="w-full md:w-3/4">
+        <div class="w-full md:w-3/4 border-2 rounded-lg p-4">
+          <p class="text-center text-3xl font-extrabold">Ngày tổ chức</p>
           <div
             class="text-center w-full"
             v-for="(month, index) of month_names"
@@ -193,7 +197,7 @@ onMounted(() => {
           >
             <div
               v-show="index == 5"
-              class="p-1 m-1 font-sans bg-white w-full min-h-56 rounded shadow-md bg-blend-luminosity bg-gradient-to-b from-green-50 via-white to-green-50"
+              class="p-1 m-1 font-sans w-full min-h-56 rounded"
             >
               <p class="p-1 text-xl font-semibold text-center text-indigo-800">
                 {{ month }}-2024
@@ -234,24 +238,27 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <div class="border-b-2 my-2"></div>
+    <!-- Thông tin cô dâu + chú rể -->
+    <div class="w-full my-2">
+      <img class="w-full" src="./assets/cdcr.png" alt="" />
+    </div>
     <div class="flex flex-col md:flex-row md:gap-4 px-4 mt-4">
-      <div class="flex justify-center md:justify-end">
-        <div class="w-full md:w-3/4 flex items-center gap-4">
-          <div class="w-full border-r-4 rounded-full">
-            <img class="rounded-full" src="./assets/DSC03105.jpg" alt="" />
-          </div>
-          <div>
-            <p class="text-center text-2xl">Chú rể</p>
-            <p>
-              Anh là chàng trai mang hài xanh, dành hết thanh xuân để yêu em !!!
-            </p>
-          </div>
+      <div class="w-full flex justify-center md:justify-end items-center gap-4">
+        <div class="w-full border-r-4 rounded-full">
+          <img class="rounded-full" src="./assets/DSC03105.jpg" alt="" />
+        </div>
+        <div>
+          <p class="text-center text-2xl">Chú rể</p>
+          <p>
+            Anh là chàng trai mang hài xanh, dành hết thanh xuân để yêu em !!!
+          </p>
         </div>
       </div>
       <div
         class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
       >
-        <div class="w-full md:w-3/4 flex items-center gap-4">
+        <div class="w-full flex items-center gap-4">
           <div>
             <p class="text-center text-2xl">Cô dâu</p>
             <p>Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!</p>
@@ -266,6 +273,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <!-- Sự kiện cưới -->
     <div class="w-full mt-4">
       <div class="text-center text-3xl font-extrabold">Sự Kiện Cưới</div>
       <div class="flex flex-col md:flex-row md:px-4 mt-4">
@@ -283,10 +291,91 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <!-- Album ảnh -->
+    <div class="w-full">
+      <div class="grid grid-cols-2">
+        <div class="col-span-1">
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/5b4cc0274b04eb5ab215.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/64b5ecb0289388cdd182.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img class="rounded-lg" src="./assets/DSC02690.jpg" alt="" />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/6268f42d7f0edf50861f.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/73b058e59cc63c9865d7.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/6b63aa212102815cd813.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img class="rounded-lg" src="./assets/DSC02518.jpg" alt="" />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/8d571bfddfde7f8026cf.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/ebe3e28569a6c9f890b7.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/5205cb39401ae044b90b.jpg"
+              alt=""
+            />
+          </div>
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/b01eb2433960993ec071.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
+* {
+  font-family: "Brush Script MT", cursive;
+}
 .bg-img {
   background-image: "./assets/footer-shape.png";
 }
