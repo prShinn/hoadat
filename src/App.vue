@@ -1,6 +1,6 @@
 <script setup lang="ts" >
 import { ref, onMounted } from "vue";
-const arrImg = ref(["./assets/3.JPG", "./assets/2.JPG"]);
+const arrImg = ref(["../hoadat/src/assets/3.JPG", "../hoadat/src/assets/2.JPG"]);
 const flowerId = ref(0);
 const flowers = ref<any[]>([]);
 const day_names = ref(["T2", "T3", "T4", "T5", "T6", "T7", "CN"]);
