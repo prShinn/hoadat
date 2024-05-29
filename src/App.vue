@@ -509,10 +509,6 @@ onMounted(() => {
   background-image: url("./assets/bg.jpg") !important;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-
-  align-items: center;
-  justify-content: center;
 }
 .flower {
   position: absolute;
