@@ -1,5 +1,6 @@
 <script setup lang="ts" >
 import { ref, onMounted } from "vue";
+import confetti from "canvas-confetti";
 const arrImg = ref([
   "/hoadat/src/assets/6b63aa212102815cd813.jpg",
   "/hoadat/src/assets/b01eb2433960993ec071.jpg",
@@ -22,6 +23,32 @@ const month_names = ref([
   "Tháng 12",
 ]);
 const showIndex = ref(0);
+function startFireWork() {
+  const duration = 1 * 1000;
+  const end = Date.now() + duration;
+
+  const colors = ["#bb0000", "#ffffff"];
+  (function frame() {
+    confetti({
+      particleCount: 2,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors,
+    });
+    confetti({
+      particleCount: 2,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors,
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+}
 function startFlowerFall() {
   setInterval(() => {
     if (!flowers.value) {
@@ -40,6 +67,9 @@ function startFlowerFall() {
       showIndex.value = 0;
     }
   }, 2000); // chuyển slide mỗi 1s
+  setInterval(() => {
+    startFireWork();
+  }, 6000);
 }
 function createFlower() {
   return {
@@ -135,6 +165,7 @@ function hafta(sol: any, ma: any) {
   return haftakuni;
 }
 onMounted(() => {
+//   startFireWork();
   createFlowers();
   startFlowerFall();
 });
