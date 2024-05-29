@@ -29,7 +29,7 @@ function startFlowerFall() {
     }
     flowers.value.push(createFlower());
     // Giới hạn số lượng hoa để không làm chậm trang
-    if (flowers.value.length > 100) {
+    if (flowers.value.length > 50) {
       flowers.value.shift();
     }
   }, 1000); // Tạo hoa mới mỗi 500ms
@@ -52,7 +52,7 @@ function createFlowers() {
   if (!flowers.value) {
     flowers.value = [];
   }
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 10; i++) {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
   }
@@ -184,7 +184,7 @@ onMounted(() => {
           </p>
           <p class="text-xl md:text-lg font-brush">For the weddiing of</p>
           <p class="text-2xl md:text-4xl font-comic">Công Đạt ♥ Thanh Hoa</p>
-          <p class="mt-2 font-itim">
+          <p class="mt-2 font-sans">
             Thật vui vì được gặp và đón tiếp mọi trong một dịp đặc biệt như này.
             Cảm ơn mọi người rất nhiều vì sự hiện diện cùng những lời chúc tốt
             đẹp mà mọi người đã dành cho gia đình và chúng em/anh/chị/cháu!
@@ -251,7 +251,7 @@ onMounted(() => {
     <div class="border-b-2 my-2"></div>
     <!-- Thông tin cô dâu + chú rể -->
     <div class="w-full my-2 bg-img">
-      <img class="w-full" src="./assets/cdcr.png" alt="" />
+      <img class="w-full" src="./assets/cdcr.jpg" alt="" />
     </div>
     <div class="flex flex-col md:flex-row md:gap-4 px-4 mt-4">
       <div class="w-full flex justify-center md:justify-end items-center gap-4">
@@ -260,7 +260,7 @@ onMounted(() => {
         </div>
         <div>
           <p class="text-center text-2xl font-itim">Chú rể</p>
-          <p class="font-itim">
+          <p class="font-sans">
             Anh là chàng trai mang hài xanh, dành hết thanh xuân để yêu em !!!
           </p>
         </div>
@@ -271,7 +271,7 @@ onMounted(() => {
         <div class="w-full flex items-center gap-4">
           <div>
             <p class="text-center text-2xl font-itim">Cô dâu</p>
-            <p class="font-itim">
+            <p class="font-sans">
               Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!
             </p>
           </div>
@@ -379,9 +379,16 @@ onMounted(() => {
       <p class="text-center font-extrabold my-2 text-4xl font-itim">
         Album ảnh cưới
       </p>
-      <div class="w-full text-center relative">
-        <a href="https://youtu.be/RUHelM6Qmvo?si=8oMTx7fpzm6c3x-w">
-          <img src="./assets/64b5ecb0289388cdd182.jpg" alt="" />
+      <div class="w-full text-center relative flex justify-center">
+        <a
+          class="w-5/6"
+          href="https://youtu.be/RUHelM6Qmvo?si=8oMTx7fpzm6c3x-w"
+        >
+          <img
+            class="opacity-70"
+            src="./assets/64b5ecb0289388cdd182.jpg"
+            alt=""
+          />
           <p
             class="text-2xl absolute top-[25%] left-[15%] md:left-[35%] md:text-6xl text-pink-500 font-black font-comic"
           >
@@ -429,7 +436,7 @@ onMounted(() => {
           <div class="p-2">
             <img
               class="rounded-lg"
-              src="./assets/6268f42d7f0edf50861f.jpg"
+              src="./assets/5205cb39401ae044b90b.jpg"
               alt=""
             />
           </div>
@@ -473,13 +480,6 @@ onMounted(() => {
               alt=""
             />
           </div>
-          <div class="p-2">
-            <img
-              class="rounded-lg"
-              src="./assets/5205cb39401ae044b90b.jpg"
-              alt=""
-            />
-          </div>
         </div>
       </div>
     </div>
@@ -488,7 +488,7 @@ onMounted(() => {
       <div class="flex justify-center h-[15rem]">
         <img class="rounded-full" src="./assets/DSC02518.jpg" alt="" />
       </div>
-      <p class="text-center my-6 font-extrabold text-3xl font-brush">
+      <p class="text-center my-6 font-extrabold text-3xl font-sans">
         Xin chân thành cảm ơn !
       </p>
     </div>
