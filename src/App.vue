@@ -154,8 +154,12 @@ onMounted(() => {
     </div>
     <!-- Title -->
     <div class="w-full flex justify-center">
-      <img src="./assets/title.png" alt="" />
+      <!-- <img src="./assets/title.png" alt="" /> -->
+      <img src="./assets/banner.jpg" alt="" />
     </div>
+    <p class="text-center font-comic text-pink-300 text-xs bg-pink-100">
+      chúng mình cưới đây !!!
+    </p>
     <!-- Ảnh cưới -->
     <div class="flex justify-center">
       <img
@@ -377,7 +381,7 @@ onMounted(() => {
       </p>
       <div class="w-full text-center relative">
         <a href="https://youtu.be/RUHelM6Qmvo?si=8oMTx7fpzm6c3x-w">
-          <img class="h-1/2" src="./assets/64b5ecb0289388cdd182.jpg" alt="" />
+          <img src="./assets/64b5ecb0289388cdd182.jpg" alt="" />
           <p
             class="text-2xl absolute top-[25%] left-[15%] md:left-[35%] md:text-6xl text-pink-500 font-black font-comic"
           >
