@@ -180,10 +180,10 @@ onMounted(() => {
           </p>
           <p class="text-xl md:text-lg font-brush">For the weddiing of</p>
           <p class="text-2xl md:text-4xl font-comic">Công Đạt ♥ Thanh Hoa</p>
-          <p class="mt-2 font-comic">
+          <p class="mt-2 font-itim">
             Thật vui vì được gặp và đón tiếp mọi trong một dịp đặc biệt như này.
-            Cảm ơn các mọi người rất nhiều vì sự hiện diện cùng những lời chúc
-            tốt đẹp mà mọi người đã dành cho gia đình và chúng em/anh/chị/cháu!
+            Cảm ơn mọi người rất nhiều vì sự hiện diện cùng những lời chúc tốt
+            đẹp mà mọi người đã dành cho gia đình và chúng em/anh/chị/cháu!
           </p>
         </div>
       </div>
@@ -191,7 +191,7 @@ onMounted(() => {
         class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
       >
         <div class="w-full md:w-3/4 border-2 rounded-lg p-4">
-          <p class="text-center text-3xl font-extrabold font-comic">
+          <p class="text-center text-3xl font-extrabold font-itim">
             Ngày tổ chức
           </p>
           <div
@@ -255,8 +255,8 @@ onMounted(() => {
           <img class="rounded-full" src="./assets/DSC03105.jpg" alt="" />
         </div>
         <div>
-          <p class="text-center text-2xl font-comic">Chú rể</p>
-          <p class="font-comic">
+          <p class="text-center text-2xl font-itim">Chú rể</p>
+          <p class="font-itim">
             Anh là chàng trai mang hài xanh, dành hết thanh xuân để yêu em !!!
           </p>
         </div>
@@ -266,8 +266,8 @@ onMounted(() => {
       >
         <div class="w-full flex items-center gap-4">
           <div>
-            <p class="text-center text-2xl font-comic">Cô dâu</p>
-            <p class="font-comic">
+            <p class="text-center text-2xl font-itim">Cô dâu</p>
+            <p class="font-itim">
               Em là cô gái mang hài đỏ, bỏ thế giới nhỏ để bên anh !!!
             </p>
           </div>
@@ -282,18 +282,18 @@ onMounted(() => {
       </div>
     </div>
     <!-- Sự kiện cưới -->
-    <div class="w-full border-t-4 pt-6 mt-4">
-      <div class="text-center text-3xl font-extrabold font-comic">
+    <div class="w-full border-t-4 pt-6 mt-4 bg-[#f3f3f3]">
+      <div class="text-center text-3xl font-extrabold font-itim">
         Sự Kiện Cưới
       </div>
       <div class="flex flex-col md:flex-row md:px-4 mt-4">
-        <div class="flex justify-center md:justify-start mt-4 p-4 border">
-          <div class="w-full text-center">
-            <div class="font-bold text-2xl font-comic">Lễ cưới nhà Gái</div>
+        <div class="flex justify-center md:justify-start mt-4">
+          <div class="w-3/4 bg-white px-2 py-10 text-center">
+            <div class="font-bold text-2xl font-itim">Lễ cưới nhà Gái</div>
             <div class="flex justify-center my-1">
               <img class="rounded-full w-1/3" src="./assets/gai.jpg" alt="" />
             </div>
-            <div class="font-comic text-xl my-1 px-4">
+            <div class="font-itim text-xl my-1 px-4">
               số 3 ngách 87/43/10 yên xá tân triều hà nội
             </div>
             <div class="flex justify-center">
@@ -306,13 +306,13 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="flex justify-center md:justify-start mt-4">
-          <div class="w-full text-center p-4 border">
-            <div class="font-bold text-2xl font-comic">Tiệc cưới nhà Gái</div>
+        <div class="flex justify-center md:justify-start mt-4 md:mt-0">
+          <div class="w-3/4 bg-white px-2 py-10 text-center p-4 border">
+            <div class="font-bold text-2xl font-itim">Tiệc cưới nhà Gái</div>
             <div class="flex justify-center my-1">
               <img class="rounded-full w-1/3" src="./assets/gai.jpg" alt="" />
             </div>
-            <div class="font-comic text-xl my-1 px-4">
+            <div class="font-itim text-xl my-1 px-4">
               Sân chơi cộng đồng yên xá
             </div>
             <div class="flex justify-center">
@@ -325,13 +325,15 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="flex justify-center md:justify-end">
-          <div class="w-full text-center p-4 border">
-            <div class="font-bold text-2xl font-comic">Lễ cưới nhà Trai</div>
+        <div
+          class="flex justify-center md:justify-end mt-6 md:mt-0 border-t-4 pt-6"
+        >
+          <div class="w-3/4 bg-white px-2 py-10 text-center p-4 border">
+            <div class="font-bold text-2xl font-itim">Lễ cưới nhà Trai</div>
             <div class="flex justify-center my-1">
               <img class="rounded-full w-1/3" src="./assets/trai.jpg" alt="" />
             </div>
-            <div class="font-comic text-xl my-1 px-4">
+            <div class="font-itim text-xl my-1 px-4">
               Sn 36 Ngõ 65 Tổ 11 Mậu Lương Kiến Hưng, Hà Đông - Hà Nội
             </div>
             <div class="flex justify-center">
@@ -344,13 +346,15 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="flex justify-center md:justify-end">
-          <div class="w-full text-center p-4 border">
-            <div class="font-bold text-2xl font-comic">Tiệc cưới nhà Trai</div>
+        <div
+          class="flex justify-center md:justify-end mt-6 md:mt-0 mb-4 md:mb-0"
+        >
+          <div class="w-3/4 bg-white px-2 py-10 text-center p-4 border">
+            <div class="font-bold text-2xl font-itim">Tiệc cưới nhà Trai</div>
             <div class="flex justify-center my-1">
               <img class="rounded-full w-1/3" src="./assets/trai.jpg" alt="" />
             </div>
-            <div class="font-comic text-xl my-1 px-4">
+            <div class="font-itim text-xl my-1 px-4">
               Nhà Văn Hóa Mậu Lương, 78 P. Mậu Lương, Kiến Hưng, Hà Đông, Hà
               Nội, Việt Nam
             </div>
@@ -368,7 +372,7 @@ onMounted(() => {
     </div>
     <!-- Album ảnh -->
     <div class="w-full border-t-4 pt-6 mt-4">
-      <p class="text-center font-extrabold my-2 text-4xl font-comic">
+      <p class="text-center font-extrabold my-2 text-4xl font-itim">
         Album ảnh cưới
       </p>
       <div class="w-full text-center relative">
@@ -380,7 +384,7 @@ onMounted(() => {
             Xem video cưới ở đây nha
           </p>
           <p
-            class="ring-4 text-pink-500 flex justify-center absolute top-[40%] left-[45%] md:left-[50%] md:text-6xl"
+            class="ring-1 ring-slate-200 rounded-full text-pink-500 flex justify-center absolute top-[40%] left-[45%] md:left-[50%] md:text-6xl"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -477,6 +481,9 @@ onMounted(() => {
     </div>
     <!-- Cảm ơn -->
     <div class="w-full border-t-4 pt-6 mt-4">
+      <div class="flex justify-center h-[15rem]">
+        <img class="rounded-full" src="./assets/DSC02518.jpg" alt="" />
+      </div>
       <p class="text-center my-6 font-extrabold text-3xl font-brush">
         Xin chân thành cảm ơn !
       </p>
@@ -490,6 +497,9 @@ onMounted(() => {
 }
 .font-comic {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.font-itim {
+  font-family: "Itim", cursive;
 }
 .bg-img {
   background-image: "./assets/footer-shape.png";
