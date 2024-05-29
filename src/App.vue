@@ -7,21 +7,7 @@ const arrImg = ref([
 ]);
 const flowerId = ref(0);
 const flowers = ref<any[]>([]);
-const day_names = ref(["T2", "T3", "T4", "T5", "T6", "T7", "CN"]);
-const month_names = ref([
-  "Tháng 1",
-  "Tháng 2",
-  "Tháng 3",
-  "Tháng 4",
-  "Tháng 5",
-  "Tháng 6",
-  "Tháng 7",
-  "Tháng 8",
-  "Tháng 9",
-  "Tháng 10",
-  "Tháng 11",
-  "Tháng 12",
-]);
+
 const showIndex = ref(0);
 function startFireWork() {
   const duration = 0.3 * 1000;
@@ -86,83 +72,6 @@ function createFlowers() {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
   }
-}
-function namNhuan(year: number) {
-  return (
-    (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||
-    (year % 100 === 0 && year % 400 === 0)
-  );
-}
-function daysNamNhuan(year: number) {
-  return namNhuan(year) ? 29 : 28;
-}
-function daysgenerater() {
-  let days: any = [];
-  for (let k = 0; k < days_of_month().length; k++) {
-    days.push([]);
-    for (let i = 1; i <= days_of_month()[k]; i++) {
-      if (days[k].length < hafta(new Date().getFullYear(), k)) {
-        i -= i;
-        days[k].push("");
-        continue;
-      }
-      days[k].push(i);
-    }
-  }
-  return days;
-}
-function days_of_month() {
-  return [
-    31,
-    daysNamNhuan(new Date().getFullYear()),
-    31,
-    30,
-    31,
-    30,
-    31,
-    31,
-    30,
-    31,
-    30,
-    31,
-  ];
-}
-function isToDay(kun: any, index: number) {
-  const dayintable = new Date(new Date().getFullYear(), index, kun);
-
-  return dayintable.getDate() == 1 || dayintable.getDate() == 2 ? true : false;
-}
-function hafta(sol: any, ma: any) {
-  let haftakuni = new Date(sol, ma).getDay();
-  switch (
-    haftakuni // hafta kuni Dushanbadan boshlangani uchun hak)
-  ) {
-    case 0:
-      haftakuni = 6;
-      break;
-    case 1:
-      haftakuni = 0;
-      break;
-    case 2:
-      haftakuni = 1;
-      break;
-    case 3:
-      haftakuni = 2;
-      break;
-    case 4:
-      haftakuni = 3;
-      break;
-    case 5:
-      haftakuni = 4;
-      break;
-    case 6:
-      haftakuni = 5;
-      break;
-    default:
-      haftakuni = new Date(sol, ma).getDay();
-      break;
-  }
-  return haftakuni;
 }
 onMounted(() => {
   createFlowers();
@@ -241,53 +150,6 @@ onMounted(() => {
           <div class="text-center w-full">
             <img src="./assets/date.jpg" alt="" />
           </div>
-          <!-- <div
-            class="text-center w-full"
-            v-for="(month, index) of month_names"
-            :key="index"
-          >
-            <div
-              v-show="index == 5"
-              class="p-1 m-1 font-sans w-full min-h-56 rounded"
-            >
-              <p
-                class="p-1 text-xl font-semibold text-center text-indigo-800 font-brush"
-              >
-                {{ month }}-2024
-              </p>
-              <div class="p-1 m-1">
-                <div
-                  class="grid grid-cols-7 font-semibold text-green-800 border-b-2 mb-2"
-                >
-                  <div v-for="days in day_names" :key="days">
-                    <div
-                      class="grid place-items-center font-comic"
-                      :class="{
-                        'text-red-600': days == 'CN',
-                      }"
-                    >
-                      <p class="text-2xl">{{ days }}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="grid grid-cols-7 gap-1 font-semibold text-center text-gray-800"
-                >
-                  <div v-for="kun of daysgenerater()[index]" :key="kun">
-                    <div
-                      :class="{
-                        ' bg-pink-200 rounded-full p-2':
-                          isToDay(kun, index) == true,
-                      }"
-                    >
-                      <p class="text-2xl font-sans">{{ kun }}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
