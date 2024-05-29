@@ -176,7 +176,7 @@ onMounted(() => {
       />
     </div>
     <!-- Lời mời + ngày cưới -->
-    <div class="flex flex-col md:flex-row md:gap-8 p-4">
+    <div class="flex flex-col md:flex-row md:gap-8 p-4 bg-img">
       <div class="flex justify-center md:justify-end">
         <div class="text-center border-4 rounded-xl p-4 md:w-3/4">
           <p class="text-3xl md:text-7xl font-black font-brush">
@@ -250,7 +250,7 @@ onMounted(() => {
     </div>
     <div class="border-b-2 my-2"></div>
     <!-- Thông tin cô dâu + chú rể -->
-    <div class="w-full my-2">
+    <div class="w-full my-2 bg-img">
       <img class="w-full" src="./assets/cdcr.png" alt="" />
     </div>
     <div class="flex flex-col md:flex-row md:gap-4 px-4 mt-4">
@@ -286,7 +286,7 @@ onMounted(() => {
       </div>
     </div>
     <!-- Sự kiện cưới -->
-    <div class="w-full border-t-4 pt-6 mt-4 bg-[#f3f3f3]">
+    <div class="w-full border-t-4 pt-6 mt-4 bg-[#f3f3f3] bg-img">
       <div class="text-center text-3xl font-extrabold font-itim">
         Sự Kiện Cưới
       </div>
@@ -506,7 +506,13 @@ onMounted(() => {
   font-family: "Itim", cursive;
 }
 .bg-img {
-  background-image: "./assets/footer-shape.png";
+  background-image: url("./assets/bg.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
 }
 .flower {
   position: absolute;
