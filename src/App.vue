@@ -66,7 +66,7 @@ function startFlowerFall() {
     if (showIndex.value >= arrImg.value.length) {
       showIndex.value = 0;
     }
-  }, 2000); // chuyển slide mỗi 1s
+  }, 3000); // chuyển slide mỗi 1s
   setInterval(() => {
     startFireWork();
   }, 5000);
@@ -192,18 +192,28 @@ onMounted(() => {
     </p>
     <!-- Ảnh cưới -->
     <div class="flex justify-center">
-      <img
-        class="w-full"
-        src="./assets/b01eb2433960993ec071.jpg"
-        alt=""
+      <div
+        class="img-slide flex"
         v-show="showIndex == 0"
-      />
-      <img
-        class="w-full"
-        src="./assets/6b63aa212102815cd813.jpg"
-        alt=""
+        :style="{
+          left: 0,
+          animationDuration: '1s',
+        }"
+      >
+        <img class="w-full" src="./assets/b01eb2433960993ec071.jpg" alt="" />
+        <img class="w-full" src="./assets/6b63aa212102815cd813.jpg" alt="" />
+      </div>
+      <div
+        class="img-slide flex"
         v-show="showIndex == 1"
-      />
+        :style="{
+          left: 0,
+          animationDuration: '1s',
+        }"
+      >
+        <img class="w-full" src="./assets/6b63aa212102815cd813.jpg" alt="" />
+        <img class="w-full" src="./assets/b01eb2433960993ec071.jpg" alt="" />
+      </div>
     </div>
     <!-- Lời mời + ngày cưới -->
     <div class="flex flex-col md:flex-row md:gap-8 p-4 bg-img">
@@ -225,10 +235,13 @@ onMounted(() => {
         class="w-full flex justify-center md:gap-4 md:justify-start mt-8 md:mt-0"
       >
         <div class="w-full md:w-3/4 border-2 rounded-lg p-4">
-          <p class="text-center text-3xl font-extrabold font-itim">
+          <!-- <p class="text-center text-3xl font-extrabold font-itim">
             Ngày tổ chức
-          </p>
-          <div
+          </p> -->
+          <div class="text-center w-full">
+            <img src="./assets/date.jpg" alt="" />
+          </div>
+          <!-- <div
             class="text-center w-full"
             v-for="(month, index) of month_names"
             :key="index"
@@ -274,7 +287,7 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -317,7 +330,7 @@ onMounted(() => {
     </div>
     <!-- Sự kiện cưới -->
     <div class="w-full border-t-4 pt-6 mt-4 bg-[#f3f3f3] bg-img">
-      <div class="text-center text-3xl font-extrabold font-itim">
+      <div class="text-center text-3xl font-extrabold font-sans">
         Sự Kiện Cưới
       </div>
       <div class="flex flex-col md:flex-row md:px-4 mt-4">
@@ -325,7 +338,11 @@ onMounted(() => {
           <div class="w-3/4 bg-white px-2 py-10 text-center">
             <div class="font-bold text-2xl font-itim">Lễ cưới nhà Gái</div>
             <div class="flex justify-center my-1">
-              <img class="rounded-full w-1/3" src="./assets/gai.jpg" alt="" />
+              <img
+                class="rounded-md w-1/2"
+                src="./assets/64b5ecb0289388cdd182.jpg"
+                alt=""
+              />
             </div>
             <div class="font-itim text-xl my-1 px-4">
               số 3 ngách 87/43/10 yên xá tân triều hà nội
@@ -344,7 +361,11 @@ onMounted(() => {
           <div class="w-3/4 bg-white px-2 py-10 text-center p-4 border">
             <div class="font-bold text-2xl font-itim">Tiệc cưới nhà Gái</div>
             <div class="flex justify-center my-1">
-              <img class="rounded-full w-1/3" src="./assets/gai.jpg" alt="" />
+              <img
+                class="rounded-md w-1/2"
+                src="./assets/73b058e59cc63c9865d7.jpg"
+                alt=""
+              />
             </div>
             <div class="font-itim text-xl my-1 px-4">
               Sân chơi cộng đồng yên xá
@@ -365,7 +386,11 @@ onMounted(() => {
           <div class="w-3/4 bg-white px-2 py-10 text-center p-4 border">
             <div class="font-bold text-2xl font-itim">Lễ cưới nhà Trai</div>
             <div class="flex justify-center my-1">
-              <img class="rounded-full w-1/3" src="./assets/trai.jpg" alt="" />
+              <img
+                class="rounded-md w-1/2"
+                src="./assets/DSC03020.jpg"
+                alt=""
+              />
             </div>
             <div class="font-itim text-xl my-1 px-4">
               Sn 36 Ngõ 65 Tổ 11 Mậu Lương Kiến Hưng, Hà Đông - Hà Nội
@@ -373,7 +398,7 @@ onMounted(() => {
             <div class="flex justify-center">
               <a
                 class="border-2 w-3/4 p-2 my-1 rounded-full text-blue-500 font-bold"
-                href="https://maps.app.goo.gl/HAsLijP3YgfXXnww7"
+                href="https://maps.app.goo.gl/CvLLFHAhLPrg4Tka8"
               >
                 Xem bản đồ</a
               >
@@ -386,7 +411,11 @@ onMounted(() => {
           <div class="w-3/4 bg-white px-2 py-10 text-center p-4 border">
             <div class="font-bold text-2xl font-itim">Tiệc cưới nhà Trai</div>
             <div class="flex justify-center my-1">
-              <img class="rounded-full w-1/3" src="./assets/trai.jpg" alt="" />
+              <img
+                class="rounded-md w-1/2"
+                src="./assets/DSC03116.jpg"
+                alt=""
+              />
             </div>
             <div class="font-itim text-xl my-1 px-4">
               Nhà Văn Hóa Mậu Lương, 78 P. Mậu Lương, Kiến Hưng, Hà Đông, Hà
@@ -406,7 +435,7 @@ onMounted(() => {
     </div>
     <!-- Album ảnh -->
     <div class="w-full border-t-4 pt-6 mt-4">
-      <p class="text-center font-extrabold my-2 text-4xl font-itim">
+      <p class="text-center font-extrabold my-2 mb-4 text-4xl font-sans">
         Album ảnh cưới
       </p>
       <div class="w-full text-center relative flex justify-center">
@@ -525,8 +554,8 @@ onMounted(() => {
     </div>
     <!-- Cảm ơn -->
     <div class="w-full border-t-4 pt-6 mt-4">
-      <div class="flex justify-center">
-        <img class="" src="./assets/footer.jpg" alt="" />
+      <div class="flex justify-center my-10">
+        <img src="./assets/footer.jpg" alt="" />
       </div>
     </div>
   </div>
@@ -550,17 +579,29 @@ onMounted(() => {
 .flower {
   position: absolute;
   top: -50px; /* Bắt đầu từ trên màn hình */
-  font-size: 14px;
+  font-size: 12px;
   animation-name: fall;
   animation-timing-function: linear;
 }
-
+.img-slide {
+  right: 0;
+  animation-name: moveLeft;
+  animation-timing-function: linear;
+}
 @keyframes fall {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(100vh); /* Rơi xuống cuối màn hình */
+  }
+}
+@keyframes moveLeft {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>
