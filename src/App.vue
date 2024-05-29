@@ -29,7 +29,7 @@ function startFlowerFall() {
     }
     flowers.value.push(createFlower());
     // Giới hạn số lượng hoa để không làm chậm trang
-    if (flowers.value.length > 50) {
+    if (flowers.value.length > 30) {
       flowers.value.shift();
     }
   }, 1000); // Tạo hoa mới mỗi 500ms
@@ -52,7 +52,7 @@ function createFlowers() {
   if (!flowers.value) {
     flowers.value = [];
   }
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 5; i++) {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
   }
@@ -278,7 +278,7 @@ onMounted(() => {
           <div class="w-full border-r-4 rounded-full">
             <img
               class="rounded-full"
-              src="./assets/8d571bfddfde7f8026cf.jpg"
+              src="./assets/73b058e59cc63c9865d7.jpg"
               alt=""
             />
           </div>
@@ -423,23 +423,8 @@ onMounted(() => {
               alt=""
             />
           </div>
-          <div class="p-2">
-            <img
-              class="rounded-lg"
-              src="./assets/64b5ecb0289388cdd182.jpg"
-              alt=""
-            />
-          </div>
-          <div class="p-2">
-            <img class="rounded-lg" src="./assets/DSC02690.jpg" alt="" />
-          </div>
-          <div class="p-2">
-            <img
-              class="rounded-lg"
-              src="./assets/5205cb39401ae044b90b.jpg"
-              alt=""
-            />
-          </div>
+        </div>
+        <div class="col-span-1">
           <div class="p-2">
             <img
               class="rounded-lg"
@@ -448,17 +433,37 @@ onMounted(() => {
             />
           </div>
         </div>
-        <div class="col-span-1">
+        <div class="col-span-2">
           <div class="p-2">
             <img
               class="rounded-lg"
-              src="./assets/6b63aa212102815cd813.jpg"
+              src="./assets/64b5ecb0289388cdd182.jpg"
               alt=""
             />
           </div>
+        </div>
+        <div class="col-span-1">
           <div class="p-2">
             <img class="rounded-lg" src="./assets/DSC02518.jpg" alt="" />
           </div>
+        </div>
+        <div class="p-2 col-span-1">
+          <div class="p-2">
+            <img
+              class="rounded-lg"
+              src="./assets/ebe3e28569a6c9f890b7.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="p-2 col-span-2">
+          <img
+            class="rounded-lg"
+            src="./assets/6b63aa212102815cd813.jpg"
+            alt=""
+          />
+        </div>
+        <div class="p-2 col-span-1">
           <div class="p-2">
             <img
               class="rounded-lg"
@@ -473,10 +478,15 @@ onMounted(() => {
               alt=""
             />
           </div>
+        </div>
+        <div class="p-2 col-span-1">
+          <div class="p-2">
+            <img class="rounded-lg" src="./assets/DSC02690.jpg" alt="" />
+          </div>
           <div class="p-2">
             <img
               class="rounded-lg"
-              src="./assets/ebe3e28569a6c9f890b7.jpg"
+              src="./assets/5205cb39401ae044b90b.jpg"
               alt=""
             />
           </div>
