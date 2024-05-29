@@ -56,7 +56,7 @@ function startFlowerFall() {
     }
     flowers.value.push(createFlower());
     // Giới hạn số lượng hoa để không làm chậm trang
-    if (flowers.value.length > 30) {
+    if (flowers.value.length > 50) {
       flowers.value.shift();
     }
   }, 1000); // Tạo hoa mới mỗi 500ms
@@ -82,7 +82,7 @@ function createFlowers() {
   if (!flowers.value) {
     flowers.value = [];
   }
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 5; i++) {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
   }
@@ -187,7 +187,7 @@ onMounted(() => {
       <!-- <img src="./assets/title.png" alt="" /> -->
       <img src="./assets/banner.jpg" alt="" />
     </div>
-    <p class="text-center font-comic text-pink-300 text-xs bg-pink-100">
+    <p class="text-center font-comic text-pink-400 text-xs bg-pink-100">
       chúng mình cưới đây !!!
     </p>
     <!-- Ảnh cưới -->
