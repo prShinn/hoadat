@@ -82,7 +82,7 @@ function createFlowers() {
   if (!flowers.value) {
     flowers.value = [];
   }
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 1; i++) {
     // Số lượng hoa rơi ban đầu
     flowers.value.push(createFlower());
   }
@@ -165,7 +165,6 @@ function hafta(sol: any, ma: any) {
   return haftakuni;
 }
 onMounted(() => {
-//   startFireWork();
   createFlowers();
   startFlowerFall();
 });
