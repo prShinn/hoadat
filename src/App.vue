@@ -24,20 +24,20 @@ const month_names = ref([
 ]);
 const showIndex = ref(0);
 function startFireWork() {
-  const duration = 1 * 1000;
+  const duration = 0.3 * 1000;
   const end = Date.now() + duration;
 
-  const colors = ["#bb0000", "#ffffff"];
+  const colors = ["#bb0000", "#ffffff", "#FFC0CB"];
   (function frame() {
     confetti({
-      particleCount: 2,
+      particleCount: 3,
       angle: 60,
       spread: 55,
       origin: { x: 0 },
       colors: colors,
     });
     confetti({
-      particleCount: 2,
+      particleCount: 3,
       angle: 120,
       spread: 55,
       origin: { x: 1 },
@@ -69,7 +69,7 @@ function startFlowerFall() {
   }, 2000); // chuyển slide mỗi 1s
   setInterval(() => {
     startFireWork();
-  }, 6000);
+  }, 5000);
 }
 function createFlower() {
   return {
@@ -248,7 +248,7 @@ onMounted(() => {
                 >
                   <div v-for="days in day_names" :key="days">
                     <div
-                      class="grid place-items-center font-brush"
+                      class="grid place-items-center font-comic"
                       :class="{
                         'text-red-600': days == 'CN',
                       }"
@@ -268,7 +268,7 @@ onMounted(() => {
                           isToDay(kun, index) == true,
                       }"
                     >
-                      <p class="text-2xl font-brush">{{ kun }}</p>
+                      <p class="text-2xl font-sans">{{ kun }}</p>
                     </div>
                   </div>
                 </div>
@@ -525,12 +525,9 @@ onMounted(() => {
     </div>
     <!-- Cảm ơn -->
     <div class="w-full border-t-4 pt-6 mt-4">
-      <div class="flex justify-center h-[15rem]">
-        <img class="rounded-full" src="./assets/DSC02518.jpg" alt="" />
+      <div class="flex justify-center">
+        <img class="" src="./assets/footer.jpg" alt="" />
       </div>
-      <p class="text-center my-6 font-extrabold text-3xl font-sans">
-        Xin chân thành cảm ơn !
-      </p>
     </div>
   </div>
 </template>
