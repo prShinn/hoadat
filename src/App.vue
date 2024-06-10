@@ -79,7 +79,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="h-screen overflow-y-scroll bg-img">
+  <div class="w-full">
     <div
       v-for="flower in flowers"
       :key="flower.id"
@@ -110,7 +110,6 @@ onMounted(() => {
         }"
       >
         <img class="w-full" src="./assets/b01eb2433960993ec071.jpg" alt="" />
-        <img class="w-full" src="./assets/6b63aa212102815cd813.jpg" alt="" />
       </div>
       <div
         class="img-slide flex"
@@ -121,7 +120,6 @@ onMounted(() => {
         }"
       >
         <img class="w-full" src="./assets/6b63aa212102815cd813.jpg" alt="" />
-        <img class="w-full" src="./assets/b01eb2433960993ec071.jpg" alt="" />
       </div>
     </div>
     <!-- Lời mời + ngày cưới -->
